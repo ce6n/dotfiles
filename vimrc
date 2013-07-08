@@ -9,7 +9,7 @@ syntax on
 filetype plugin indent on
 
 " Colorscheme see https://github.com/hukl/Smyck-Color-Scheme
-color smyck
+color solarized
 
 " Add line numbers
 set number

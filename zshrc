@@ -1,14 +1,20 @@
 # Explicitly configured $PATH variable
 PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
+PATH=$HOME/Library/Python/2.7/bin:$PATH
 
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
+
+DEFAULT_USER="sebastian"
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
 # time that oh-my-zsh is loaded.
-ZSH_THEME="junkfood"
+ZSH_THEME="agnoster"
+
+# powerline
+. /Users/sebastian/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
@@ -64,3 +70,6 @@ qfind () {
 if [ -f /usr/bin/vim ]; then
     export EDITOR=/usr/bin/vim
 fi
+
+export LANG=en_US.utf8
+export LC_ALL=en_US.utf8
