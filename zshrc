@@ -14,7 +14,7 @@ DEFAULT_USER="sebastian"
 ZSH_THEME="agnoster"
 
 # powerline
-. /Users/sebastian/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
+#. /Users/sebastian/Library/Python/2.7/lib/python/site-packages/powerline/bindings/zsh/powerline.zsh
 
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
