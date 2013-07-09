@@ -1115,3 +1115,6 @@ autocmd ColorScheme * if g:colors_name != "solarized" | silent! aunmenu Solarize
 "
 " vim:foldmethod=marker:foldlevel=0
 "}}}
+"
+hi ColumnMargin         cterm=none ctermbg=0                        gui=none        guibg=#000000
+

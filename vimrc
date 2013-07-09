@@ -47,6 +47,9 @@ set hlsearch
 " Map Ctrl+l to clear highlighted searches
 nnoremap <silent> <C-l> :<C-u>nohlsearch<CR><C-l>
 
+" escape key replacement
+:imap jj <Esc>
+
 " Highlight characters behind the 80 chars margin
 :au BufWinEnter * let w:m2=matchadd('ColumnMargin', '\%>80v.\+', -1)
 
@@ -92,3 +95,17 @@ let g:ctrlp_custom_ignore = {
 
 let g:erlangCheckFile = "~/.vim/bundle/vimerl/compiler/erlang_check_file.erl"
 let g:erlangHighlightErrors = 1
+
+
+" powerline
+set rtp+=~/Library/Python/2.7/lib/python/site-packages/powerline/bindings/vim
+
+" Powerline
+python from powerline.vim import setup as powerline_setup
+python powerline_setup()
+python del powerline_setup
+
+set laststatus=2 " Always display the statusline in all windows
+set noshowmode " Hide the default mode text (e.g. -- INSERT -- below the statusline)
+
+set guifont=Source\ Code\ Pro\ for\ Powerline:h13

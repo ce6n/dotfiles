@@ -2,6 +2,8 @@
 PATH=/usr/local/git/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/opt/local/bin:/opt/local/sbin:/usr/X11/bin
 PATH=$HOME/Library/Python/2.7/bin:$PATH
 
+
+
 # Path to your oh-my-zsh configuration.
 ZSH=$HOME/.oh-my-zsh
 
@@ -71,5 +73,24 @@ if [ -f /usr/bin/vim ]; then
     export EDITOR=/usr/bin/vim
 fi
 
-export LANG=en_US.utf8
-export LC_ALL=en_US.utf8
+#export LANG=en_US.utf8
+#export LC_ALL=en_US.utf8
+
+#export PAGER=vimpager
+
+alias less=$PAGER
+alias zless=$PAGER
+
+# seismic unix
+export CWPROOT=/Users/sebastian/cwpsu
+export PATH=/Users/sebastian/cwpsu/bin:$PATH
+
+# print sourcecode to pdf
+pdfcode () {
+  string=$1'|%W|Page $% of $='
+  iconv -f utf-8 -t iso-8859-1 $1 |\
+    enscript -2 --header=$string --margins=10:10: -E -o - |\
+    ps2pdf - > ${1%.*}.pdf
+  return 0
+}
+
